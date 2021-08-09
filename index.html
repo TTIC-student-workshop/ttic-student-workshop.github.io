@@ -20,6 +20,18 @@ function showAbstract(e){
    return true;
 }
 </script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+                "HTML-CSS": {
+                    availableFonts: ["Asana-Math"],
+                    preferredFont: "Asana-Math"
+                }
+});
+</script>
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 
 <!DOCTYPE html>
 <html class="no-js" lang="en">
@@ -169,8 +181,11 @@ function showAbstract(e){
       </tr>
       <tr>
         <td><b>11:00-12:00</b></td>
-        <td><b>Keynote Talk: John Langford </b></td>
-        <td/>
+        <td><b>Keynote Talk: John Langford <br/> <a href="https://en.wikipedia.org/wiki/John_Langford_(computer_scientist)"> Speaker Bio</a></b></td>
+        <td> <a href="javascript:void(0)" onclick="showAbstract(this)" class="title"><b> Latent State Discovery</b></a> <br/>
+<div class="abs">
+<b>Abstract.</b> If you add a sensor to a learning agent, does the problem that it solves become more difficult? Or does it become easier? Intuitions differ here. In one view, more information is better, so better decisions can be made yield better performance. In another, the learning theory of Markov Decision Processes suggests that it becomes more difficult because the 'state space' is larger. This conundrum can be resolved with the notion of a latent state - some underlying elements from which an observation space is created. But what is a good definition of a latent state? When and how can you learn a latent state?
+</div></td>
       </tr>
       <tr>
         <td><b>12:00-13:30</b></td>
@@ -190,7 +205,7 @@ function showAbstract(e){
         <td>Falcon Dai</td>
         <td> <a href="javascript:void(0)" onclick="showAbstract(this)" class="title"><b> Loop Estimator for Discounted Values in Markov Reward Processes</b></a> <br/>
 <div class="abs">
-<b>Abstract.</b> At the working heart of policy iteration algorithms commonly used and studied in the discounted setting of reinforcement learning, the policy evaluation step estimates the value of states with samples from a Markov reward process induced by following a Markov policy in a Markov decision process. We propose a simple and efficient estimator called loop estimator that exploits the regenerative structure of Markov reward processes without explicitly estimating a full model. Our method enjoys a space complexity of O(1) when estimating the value of a single positive recurrent state s unlike TD with O(S) or model-based methods with O(S^2). Moreover, the regenerative structure enables us to show, without relying on the generative model approach, that the estimator has an instance-dependent convergence rate of O˜(√(τ_s/T)) over steps T on a single sample path, where τ_s is the maximal expected hitting time to state s. In preliminary numerical experiments, the loop estimator outperforms model-free methods, such as TD(k), and is competitive with the model-based estimator.
+<b>Abstract.</b> At the working heart of policy iteration algorithms commonly used and studied in the discounted setting of reinforcement learning, the policy evaluation step estimates the value of states with samples from a Markov reward process induced by following a Markov policy in a Markov decision process. We propose a simple and efficient estimator called loop estimator that exploits the regenerative structure of Markov reward processes without explicitly estimating a full model. Our method enjoys a space complexity of $O(1)$ when estimating the value of a single positive recurrent state s unlike TD with $O(S)$ or model-based methods with $O(S^2)$. Moreover, the regenerative structure enables us to show, without relying on the generative model approach, that the estimator has an instance-dependent convergence rate of $\tilde{O}(\sqrt{\tau_s/T})$ over steps $T$ on a single sample path, where $\tau_s$ is the maximal expected hitting time to state s. In preliminary numerical experiments, the loop estimator outperforms model-free methods, such as TD(k), and is competitive with the model-based estimator.
 </div></td>
       </tr>
       <tr>
