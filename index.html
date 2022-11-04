@@ -10,7 +10,6 @@
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
   <style>
-
     .bg-slate-100 {
       background-color: #f1f5f9;
     }
@@ -21,6 +20,20 @@
 
     .border-ttic-primary {
       border-color: #006eb6 !important;
+    }
+
+    .title {
+      cursor: pointer;
+    }
+
+    .abs {
+      display: none;
+    }
+
+    .schedule {
+      /* table-layout: fixed; */
+      width: 100%;
+      min-width: 936px;
     }
   </style>
 </head>
@@ -33,7 +46,7 @@
       <div class="d-sm-flex flex-row">
         <div>
           <a href="https://ttic.edu/" target="_blank">
-          <img src="https://ttic.edu/img/logo.png" style="max-height:240px;">
+            <img src="https://ttic.edu/img/logo.png" style="max-height:240px;">
           </a>
         </div>
         <div class="flex-grow-1 ps-sm-5 pt-3 pt-sm-0">
@@ -43,16 +56,422 @@
       </div>
     </div>
 
-    <p class="my-4">
-      The 6th <a href="https://ttic.edu" target="_blank"/>TTIC</a> Student Workshop will take place <strong>in person</strong> on November 18, 2022. It will include student talks, a poster session,
-      invited talks, and mentorship events.
+    <p class="mt-4">
+      The 6th <a href="https://ttic.edu" target="_blank" />TTIC</a> Student Workshop will take place <strong>in
+        person</strong> on November 18, 2022. It will include student talks, a poster session, and an invited
+      talk.<br />
+      This year's keynote speaker is <a href="https://people.cs.uchicago.edu/~aakhan/">Aly Azeem Khan</a>.
     </p>
-
     <p>
-      <strong class="text-ttic-primary">Organizing Committee</strong>: Ben Lai, Max Ovsiankin, Karen Livescu, Madhur Tulsiani, Erica Cocom
+      <strong class="text-ttic-primary">Organizing Committee</strong>: Ben Lai, Max Ovsiankin, Karen Livescu, Madhur
+      Tulsiani, Erica Cocom <br />
+      <strong class="text-ttic-primary">Award Committee</strong>: Ali Vakilan, Lee Cohen, Hongyuan Mei
     </p>
-    <div class="alert alert-warning">
-      This site is still under construction. Check back later for updates!</br>
+    <div class="alert alert-secondary">
+      <strong>All attendees:</strong> Please fill out the <a href="https://forms.gle/HbY9YPzbvv9QH7N19">registration form</a> if you plan to attend.
+    </div>
+  </div>
+
+  <div class="container">
+    <h3>Schedule</h3>
+    <div class="text-muted mb-2">
+      Times in CST. (Click on the talk titles to view abstracts.)
+    </div>
+    <div class="table-responsive-lg">
+      <table class="schedule table table-sm table-hover">
+        <tbody>
+          <tr>
+            <td style="width:120px"><b>8:30-9:05</b></td>
+            <td style="width:300px"><b>Breakfast & Opening Remarks</b></td>
+            <td />
+          </tr>
+
+          <tr>
+            <td><b>9:10-10:50</b></td>
+            <td><b>Talk Session 1</b> (Chair: Ali Vakilian)</td>
+            <td />
+          </tr>
+
+          <tr>
+            <td> </td>
+            <td>Ben Lai</td>
+            <td>
+              <a onclick="showAbstract(this)" class="title"><b>Flexible Backbone Construction via Deep Generative Model
+                  for de novo Protein Design</b></a>
+              </br>
+              <div class="abs">
+                <b>Abstract.</b>
+                Current computational protein design paradigms heavily rely on robust backbone assembly for downstream
+                sequence design programs such as Rosetta and these methods often require idealized backbone structure
+                and
+                extensive manual calibration for successful design of the target fold. However, such design approaches
+                often involve expert curation of the template structures as well as conformation database therefore
+                time-consuming in practice. Recently, many deep-learning powered fixed backbone sequence design methods
+                have been proposed, these methods showed robustness towards degenerate backbone structures by
+                introducing
+                noise at the training stage of the deep learning module. Fast and accurate structure prediction methods
+                can enable rapid scanning of the designed sequences for structure compliance.</br>
+
+                Here, we present a VAE based backbone generative model that can construct designable backbone structures
+                from coarsely grained topological constraints for flexible and efficient backbone generation. To form an
+                end-to-end design pipeline, we will combine our backbone generative model with a deep learning based
+                fixed-backbone sequence design method ProteinMPNN and validate the design in silico with the AlphaFold2
+                structure predictor. We will demonstrate the capability of our design paradigm by parametric design of
+                (i)
+                helix bundles with customized topological properties and (ii) ligand binding proteins ab initio.
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td> </td>
+            <td>Ron Mosenzon</td>
+            <td> <a onclick="showAbstract(this)" class="title"><b>Exact Flow Sparsification Requires Unbounded
+                  Size</b></a>
+              <br />
+              <div class="abs">
+                <b>Abstract.</b> Given a large edge-capacitated network $G$ and a subset of $k$ vertices called
+                <em>terminals</em>,
+                an (<em>exact</em>) <em>flow sparsifier</em> is a small network $G'$
+                that preserves (exactly) all multicommodity flows that can be routed between the terminals.
+                Flow sparsifiers were introduced by Leighton and Moitra [STOC 2010],
+                and have been studied and used in many algorithmic contexts. </br>
+
+                A fundamental question that remained open for over a decade,
+                asks whether every $k$-terminal network admits an exact flow sparsifier
+                whose size is bounded by some function $f(k)$
+                (regardless of the size of $G$ or its capacities).
+                We resolve this question in the negative
+                by proving that there exist $6$-terminal networks $G$
+                whose flow sparsifiers $G'$ must have arbitrarily large size.
+                This unboundedness is perhaps surprising,
+                since the analogous sparsification that preserves all terminal cuts
+                (called <em>exact cut sparsifier</em> or <em>mimicking network</em>)
+                admits sparsifiers of size $f_0(k)\leq 2^{2^k}$
+                [Hagerup, Katajainen, Nishimura, and Ragde, JCSS 1998]. </br>
+
+                We prove our results by analyzing the set of all feasible demands in the network,
+                known as the <em>demand polytope</em>.
+                We identify an invariant of this polytope,
+                essentially the slope of certain facets,
+                that can be made arbitrarily large even for $k=6$,
+                and implies an explicit lower bound on the size of the network.
+                We further use this technique to answer, again in the negative,
+                an open question of Seymour [JCTB 2015] regarding flow-sparsification
+                that uses only contractions and preserves the infeasibility of one demand vector. </br>
+              </div>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Kumar Kshitij Patel</td>
+            <td><a onclick="showAbstract(this)" class="title"><b>Distributed Online and Bandit Convex
+                  Optimization</b></a>
+              <br />
+              <div class="abs">
+                <b>Abstract.</b> We study the problems of distributed online and bandit convex optimization against an
+                adaptive adversary. We aim to minimize the average regret on $M$ machines working in parallel for $T$
+                time
+                steps that are allowed to communicate $R$ times intermittently. Assuming the underlying cost functions
+                are
+                convex, our results show collaboration is not beneficial if the machines have access to the first-order
+                gradient information at the queried points. We show that in this setting, simple non-collaborative
+                algorithms are min-max optimal. This contrasts the stochastic setting, where each machine samples the
+                cost
+                functions from a fixed distribution. Next, we consider the harder setting of distributed optimization
+                with
+                bandit (zeroth-order) feedback, where the machines can only access values of the cost functions at the
+                queried points. The key finding here is to identify the high-dimensional regime where collaboration is
+                beneficial and may even lead to a linear speedup in the number of machines. Our results are the first
+                attempts towards bridging the gap between distributed online optimization against stochastic and
+                adaptive
+                adversaries.
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Naren Sarayu Manoj</td>
+            <td><a onclick="showAbstract(this)" class="title"><b>TBA</b></a>
+              <br />
+              <div class="abs">
+                <b>Abstract.</b> TBA
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><b>11:00-12:00</b></td>
+            <td><b>Keynote Talk: Aly Azeem Khan <br /> <a href="https://people.cs.uchicago.edu/~aakhan/"> Speaker
+                  Bio</a></b></td>
+            <td> <a onclick="showAbstract(this)" class="title"><b> TBA</b></a>
+              <br />
+              <div class="abs">
+                <b>Abstract.</b> TBA
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><b>12:00-12:40</b></td>
+            <td><b>Lunch</b></td>
+            <td>4th Floor Kitchen</td>
+          </tr>
+          <tr>
+            <td><b>12:40-13:15</b></td>
+            <td><b>Lunch + Poster Session</b></td>
+            <td>4th Floor Common Space</td>
+          </tr>
+          <tr>
+            <td />
+            <td>Ju-Chieh Chou</td>
+            <td> <a onclick="showAbstract(this)" class="title"><b>Joint language modeling for speech and text via
+                  speech-text splicing</b></a> <br />
+              <div class="abs">
+                <b>Abstract.</b> An open question in speech research is whether text data can be used to improve
+                pre-trained speech models. We introduce an approach to learning a joint speech-text language model (LM)
+                by
+                augmenting the training data with alternating speech and text. By learning from the concatenated
+                discretized speech and text, the model learns shared representations between speech and text. We show
+                that
+                the model is able to perform cross-modal continuation, and zero-shot transfer between speech and text
+                after fine-tuning on spoken language understanding tasks. We conduct experiments on different units for
+                speech and different subsets of speech and/or text training data to better understand the properties of
+                speech-text joint LM.
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td />
+            <td>Anmol Kabra</td>
+            <td> <a onclick="showAbstract(this)" class="title"><b>Exponential Family Model-Based Reinforcement Learning
+                  via Score Matching</b></a> <br />
+              <div class="abs">
+                <b>Abstract.</b> We propose an optimistic model-based algorithm, dubbed SMRL, for finite-horizon
+                episodic
+                reinforcement learning (RL) when the transition model is specified by exponential family distributions
+                with $d$ parameters and the reward is bounded and known. SMRL uses score matching, an unnormalized
+                density
+                estimation technique that enables efficient estimation of the model parameter by ridge regression. Under
+                standard regularity assumptions, SMRL achieves $\tilde{O}(d \sqrt{H^3 T})$ online regret, where $H$ is
+                the
+                length of each episode and $T$ is the total number of interactions (ignoring polynomial dependence on
+                structural scale parameters).
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><b>13:15-14:55</b></td>
+            <td><b>Talk Session 2</b> (Chair: Lee Cohen)</td>
+            <td />
+          </tr>
+          <tr>
+            <td> </td>
+            <td>Gene Li</td>
+            <td> <a onclick="showAbstract(this)" class="title"><b>Pessimism for Offline Linear Contextual Bandits using
+                  $L_p$ Confidence Sets</b></a> <br />
+              <div class="abs">
+                <b>Abstract.</b> We present a family $\{\hat{\pi_p}\}_{p \geq 1}$ of pessimistic learning rules for
+                offline learning of linear
+                contextual bandits, relying on confidence sets with respect to different $\ell_p$ norms, where
+                $\hat{\pi}_2$ corresponds
+                to Bellman-consistent pessimism (BCP), while $\hat{\pi}_\infty$ is a novel generalization of lower
+                confidence bound (LCB)
+                to the linear setting. We show that the novel $\hat{\pi}_\infty$ learning rule is, in a sense,
+                adaptively
+                optimal, as it
+                achieves the minimax performance (up to log factors) against all $\ell_q$-constrained problems, and as
+                such it
+                strictly dominates all other predictors in the family, including $\hat{\pi}_2$.
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td> </td>
+            <td>Han Shao</td>
+            <td> <a onclick="showAbstract(this)" class="title"><b>A Theory of PAC Learnability under Transformation
+                  Invariances</b></a> <br />
+              <div class="abs">
+                <b>Abstract.</b> Transformation invariances are present in many real-world problems. For example, image
+                classification is usually invariant to rotation and color transformation: a rotated car in a different
+                color is still identified as a car. Data augmentation, which adds the transformed data into the training
+                set and trains a model on the augmented data, is one commonly used technique to build these invariances
+                into the learning process. However, it is unclear how data augmentation performs theoretically and what
+                the optimal algorithm is in presence of transformation invariances. In this paper, we study PAC
+                learnability under transformation invariances in three settings according to different levels of
+                realizability: (i) A hypothesis fits the augmented data; (ii) A hypothesis fits only the original data
+                and
+                the transformed data lying in the support of the data distribution; (iii) Agnostic case. One interesting
+                observation is that distinguishing between the original data and the transformed data is necessary to
+                achieve optimal accuracy in setting (ii) and (iii), which implies that any algorithm not differentiating
+                between the original and transformed data (including data augmentation) is not optimal. Furthermore,
+                this
+                type of algorithms can even ``harm'' the accuracy. In setting (i), although it is unnecessary to
+                distinguish between the two data sets, data augmentation still does not perform optimally. Due to such a
+                difference, we propose two combinatorial measures characterizing the optimal sample complexity in
+                setting
+                (i) and (ii)(iii) and provide the optimal algorithms.
+              </div>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td> </td>
+            <td>Keziah Naggita</td>
+            <td> <a onclick="showAbstract(this)" class="title"><b>The Strategic Perceptron</b></a> <br />
+              <div class="abs">
+                <b>Abstract.</b> The classical <em>Perceptron algorithm</em> provides a simple and elegant procedure for
+                learning a linear classifier. In each step, the algorithm observes the sample's <em>position</em> and
+                <em>label</em> and updates the current predictor accordingly if it makes a mistake. However, in presence
+                of
+                strategic agents that desire to be classified as positive and that are able to modify their position by
+                a
+                limited amount, the classifier may not be able to observe the true position of agents but rather a
+                position where the agent pretends to be. Unlike the original setting with perfect knowledge of
+                positions,
+                in this situation the Perceptron algorithm fails to achieve its guarantees, and we illustrate examples
+                with the predictor oscillating between two solutions forever, making an unbounded number of mistakes
+                even
+                though a perfect large-margin linear classifier exists. Our main contribution is providing a modified
+                Perceptron-style algorithm which makes a bounded number of mistakes in presence of strategic agents with
+                both $\ell_2$ and weighted $\ell_1$ manipulation costs. In our baseline model, knowledge of the
+                manipulation costs (i.e., the extent to which an agent may manipulate) is assumed. In our most general
+                model, we relax this assumption and provide an algorithm which learns and refines both the classifier
+                and
+                its cost estimates to achieve good mistake bounds even when manipulation costs are unknown.
+              </div>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td> </td>
+            <td>Omar Montasser</td>
+            <td> <a onclick="showAbstract(this)" class="title"><b>Boosting Barely Robust Learners</b></a> <br />
+              <div class="abs">
+                <b>Abstract.</b> We present an oracle-efficient algorithm for boosting the adversarial robustness of
+                barely robust learners. Barely robust learning algorithms learn predictors that are adversarially robust
+                only on a small fraction $\beta \ll 1$ of the data distribution. Our proposed notion of barely robust
+                learning
+                requires robustness with respect to a "larger" perturbation set; which we show is necessary for strongly
+                robust learning, and that weaker relaxations are not sufficient for strongly robust learning. Our
+                results
+                reveal a qualitative and quantitative equivalence between two seemingly unrelated problems: strongly
+                robust learning and barely robust learning.
+              </div>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><b>14:55-15:15</b></td>
+            <td><b>Coffee Break</b></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><b>13:15-14:55</b></td>
+            <td><b>Talk Session 3</b> (Chair: Hongyuan Mei)</td>
+            <td />
+          </tr>
+          <tr>
+            <td> </td>
+            <td>Freda Shi</td>
+            <td> <a onclick="showAbstract(this)" class="title"><b>Natural Language to Code Translation with
+                  Execution</b></a> <br />
+              <div class="abs">
+                <b>Abstract.</b> Generative models of code, pretrained on large corpora of programs, have shown great
+                success in translating natural language to code (Chen et al., 2021; Austin et al., 2021; Li et al.,
+                2022,
+                inter alia). While these models do not explicitly incorporate program semantics (i.e., execution
+                results)
+                during training, they are able to generate correct solutions for many problems. However, choosing a
+                single
+                correct program from among a generated set for each problem remains challenging. In this work, we
+                introduce execution result--based minimum Bayes risk decoding (MBR-EXEC) for program selection and show
+                that it improves the few-shot performance of pretrained code models on natural-language-to-code tasks.
+                We
+                select output programs from a generated candidate set by marginalizing over program implementations that
+                share the same semantics. Because exact equivalence is intractable, we execute each program on a small
+                number of test inputs to approximate semantic equivalence. Across datasets, execution or simulated
+                execution significantly outperforms the methods that do not involve program semantics. We find that
+                MBR-EXEC consistently improves over all execution-unaware selection methods, suggesting it as an
+                effective
+                approach for natural language to code translation.
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td> </td>
+            <td>Haochen Wang</td>
+            <td> <a onclick="showAbstract(this)" class="title"><b>Score Jacobian Chaining: Lifting Pretrained 2D
+                  Diffusion
+                  Models to 3D for Generation and Reconstruction</b></a> <br />
+              <div class="abs">
+                <b>Abstract.</b> Inference of a diffusion model can be understood as op-
+                timization on a vector field of gradients, and we can apply
+                chain rule on gradients. We treat the score of a diffusion
+                model as the initial adjoint state of a backprop compute
+                graph, and chain it with the jacobian of a differentiable ren-
+                derer, which we instantiate to be a voxel radiance field. This
+                setup aggregates 2D scores at multiple camera viewpoints
+                into a 3D score, and we perform gradient descent on this
+                new vector field to optimize the voxels. We run the algo-
+                rithm on several off-the-shelf models, including the recently
+                released Stable Diffusion trained on large-scale LAION 5B
+                dataset. We develop applications for 3D data generation,
+                editing as well as single-view 3D reconstruction. We explore
+                the validity of our assumptions.
+              </div>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td> </td>
+            <td>Chung-Ming Chien</td>
+            <td> <a onclick="showAbstract(this)" class="title"><b>Voice Conversion with Pre-Trained Self-Supervised
+                  Models</b></a> <br />
+              <div class="abs">
+                <b>Abstract.</b> The success of self-supervised learning has brought speech technology to a new era.
+                With
+                these powerful self-supervised pre-trained models, large amounts of labeled data are no longer necessary
+                in a variety of tasks. In this work, we present one of the first attempts to apply self-supervised
+                representations to a one-shot voice conversion task, where the model converts utterances spoken by any
+                speaker to the voice of a target speaker it has never seen before, given only one utterance from that
+                target speaker. We demonstrate that the phonetic and speaker information can be extracted and separated
+                from self-supervised representations without any labeled data. Though no phonetic annotation is used
+                during training, our analysis shows that the model implicitly learns to break down the utterances and
+                align short speech fragments from different speakers with similar phonetic content, which enables the
+                conversion of speaker identity without changing the content. Compared with previous work that does not
+                use
+                self-supervised pre-training, our method improves both naturalness and speaker similarity of the
+                converted
+                speech.
+              </div>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td> </td>
+            <td>Takuma Yoneda</td>
+            <td> <a onclick="showAbstract(this)" class="title"><b>Diffusion Models for Shared Autonomy</b></a> <br />
+              <div class="abs">
+                <b>Abstract.</b> Diffusion models have recently gained a lot of attention, especially in the context of
+                computer vision. In this work, we focus on the property of a diffusion model that it learns to "reverse
+                diffuse" a random sample back to a near in-distribution sample seen during training, and adapt it as an
+                assistive policy in shared autonomy. This property of diffusion models eliminates the necessity of
+                modeling user's behavior or learning when to intervene that previous methods had to deal with.
+              </div>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><b>16:55-17:15</b></td>
+            <td><b>Coffee Break</b></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><b>17:15-17:30</b></td>
+            <td><b>Awards & Final Remarks</b></td>
+            <td />
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 
@@ -75,13 +494,14 @@
     function showAbstract(e) {
       f = e;
       var div;
+
       for (div = e.nextSibling; div.className != "abs"; div = div.nextSibling);
-      if (div.style.display == "block") {
-        div.style.display = "";
+
+      if (div.style.display === "none" || div.style.display === '') {
+        div.style.display = "inline-block";
       } else {
-        div.style.display = "block";
+        div.style.display = "none";
       }
-      return true;
     }
   </script>
 
