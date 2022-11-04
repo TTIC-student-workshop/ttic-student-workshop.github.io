@@ -218,7 +218,7 @@
           <tr>
             <td><b>11:00-12:00</b></td>
             <td><b>Keynote Talk: Aly Azeem Khan</b> <br /> <a href="https://people.cs.uchicago.edu/~aakhan/"> Speaker
-                  Bio</a></td>
+                Bio</a></td>
             <td> <a onclick="showAbstract(this)" class="title"><b> TBA</b></a>
               <br />
               <div class="abs">
@@ -419,20 +419,14 @@
                   Diffusion
                   Models to 3D for Generation and Reconstruction</b></a> <br />
               <div class="abs">
-                <b>Abstract.</b> Inference of a diffusion model can be understood as op-
-                timization on a vector field of gradients, and we can apply
-                chain rule on gradients. We treat the score of a diffusion
-                model as the initial adjoint state of a backprop compute
-                graph, and chain it with the jacobian of a differentiable ren-
-                derer, which we instantiate to be a voxel radiance field. This
-                setup aggregates 2D scores at multiple camera viewpoints
-                into a 3D score, and we perform gradient descent on this
-                new vector field to optimize the voxels. We run the algo-
-                rithm on several off-the-shelf models, including the recently
-                released Stable Diffusion trained on large-scale LAION 5B
-                dataset. We develop applications for 3D data generation,
-                editing as well as single-view 3D reconstruction. We explore
-                the validity of our assumptions.
+                <b>Abstract.</b> Inference of a diffusion model can be interpreted as optimization on a vector field of
+                gradients, and we can apply chain rule on gradients. We back-propagate the score of a diffusion model
+                through the Jacobian of a differentiable renderer, which we instantiate to be a voxel radiance field.
+                This setup aggregates 2D scores at multiple camera viewpoints into a 3D score, and repurposes a
+                pre-trained 2D model for 3D data generation. We run the algorithm on several off-the-shelf diffusion
+                image generative models, including the recently released Stable Diffusion trained on the large-scale
+                LAION 5B dataset. We develop applications for 3D asset generation, editing as well as single-view 3D
+                reconstruction, and explore the validity of our assumptions.
               </div>
             </td>
             <td></td>
