@@ -208,10 +208,23 @@
           <tr>
             <td></td>
             <td>Naren Sarayu Manoj</td>
-            <td><a onclick="showAbstract(this)" class="title"><b>TBA</b></a>
+            <td><a onclick="showAbstract(this)" class="title"><b>Group Lewis Weights and Group Norm
+                  Sparsification</b></a>
               <br />
               <div class="abs">
-                <b>Abstract.</b> TBA
+                <b>Abstract.</b> Given $p \ge 2$, a matrix $\mathbf{A} \in \mathbb{R}^{m \times n}$, and a partitioning
+                of $[m]$ into $k$ size-$r$ groups $S_1, \dots, S_k$, we prove that there exists a subset $T$ of $[k]$
+                and a corresponding group reweighting such that $\sum_{i=1}^k \max_{j \in S_i} \lvert\langle \mathbf{a_j},
+                \mathbf{x}\rangle\rvert^p \approx_{1+\varepsilon} \sum_{i\in T} \max_{j \in S_i} \lvert\langle \mathbf{a_j},
+                \mathbf{x}\rangle\rvert^p$ for $\lvert T\rvert =
+                \widetilde{O}\left(\varepsilon^{-2}p^2n^{\max(1,p/2)}\right)$. Additionally, we show that there exists
+                an algorithm with runtime $\widetilde{O}\left(\mathsf{nnz}(\mathbf{A})+n^{\omega}\right)$ that returns
+                such a subset, where $\omega$ is the matrix multiplication runtime exponent. Our results partially
+                resolve an open question posed in the paper <em>Chaining, Group Leverage Score Overestimates, and
+                  Fast Spectral Hypergraph Sparsification</em> by Jambulapati, Liu, and Sidford. Our results also yield
+                an
+                alternate analysis of "one-shot" Lewis sampling for $p\ge 2$, a new result proven in the SODA 2023
+                paper <em>Online Lewis Weight Sampling</em> by Woodruff and Yasuda.
               </div>
             </td>
           </tr>
@@ -388,27 +401,18 @@
           <tr>
             <td> </td>
             <td>Freda Shi</td>
-            <td> <a onclick="showAbstract(this)" class="title"><b>Natural Language to Code Translation with
-                  Execution</b></a> <br />
+            <td> <a onclick="showAbstract(this)" class="title"><b>Language Models are Multilingual Chain-of-Thought
+                  Reasoners</b></a> <br />
               <div class="abs">
-                <b>Abstract.</b> Generative models of code, pretrained on large corpora of programs, have shown great
-                success in translating natural language to code (Chen et al., 2021; Austin et al., 2021; Li et al.,
-                2022,
-                inter alia). While these models do not explicitly incorporate program semantics (i.e., execution
-                results)
-                during training, they are able to generate correct solutions for many problems. However, choosing a
-                single
-                correct program from among a generated set for each problem remains challenging. In this work, we
-                introduce execution result--based minimum Bayes risk decoding (MBR-EXEC) for program selection and show
-                that it improves the few-shot performance of pretrained code models on natural-language-to-code tasks.
-                We
-                select output programs from a generated candidate set by marginalizing over program implementations that
-                share the same semantics. Because exact equivalence is intractable, we execute each program on a small
-                number of test inputs to approximate semantic equivalence. Across datasets, execution or simulated
-                execution significantly outperforms the methods that do not involve program semantics. We find that
-                MBR-EXEC consistently improves over all execution-unaware selection methods, suggesting it as an
-                effective
-                approach for natural language to code translation.
+                <b>Abstract.</b> We evaluate the reasoning abilities of large language models in multilingual settings.
+                We introduce the Multilingual Grade School Math (MGSM) benchmark, by manually translating 250
+                grade-school math problems from the GSM8K dataset (Cobbe et al., 2021) into ten typologically diverse
+                languages. We find that the ability to solve MGSM problems via chain-of-thought prompting emerges with
+                increasing model scale, and that models have strikingly strong multilingual reasoning abilities, even in
+                underrepresented languages such as Bengali and Swahili. Finally, we show that the multilingual reasoning
+                abilities of language models extend to other tasks such as commonsense reasoning and word-in-context
+                semantic judgment. The MGSM benchmark is publicly available at
+                <a href="https://github.com/google-research/url-nlp">https://github.com/google-research/url-nlp</a>.
               </div>
             </td>
           </tr>
