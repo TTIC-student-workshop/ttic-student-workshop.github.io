@@ -214,8 +214,10 @@
               <div class="abs">
                 <b>Abstract.</b> Given $p \ge 2$, a matrix $\mathbf{A} \in \mathbb{R}^{m \times n}$, and a partitioning
                 of $[m]$ into $k$ size-$r$ groups $S_1, \dots, S_k$, we prove that there exists a subset $T$ of $[k]$
-                and a corresponding group reweighting such that $\sum_{i=1}^k \max_{j \in S_i} \lvert\langle \mathbf{a_j},
-                \mathbf{x}\rangle\rvert^p \approx_{1+\varepsilon} \sum_{i\in T} \max_{j \in S_i} \lvert\langle \mathbf{a_j},
+                and a corresponding group reweighting such that $\sum_{i=1}^k \max_{j \in S_i} \lvert\langle
+                \mathbf{a_j},
+                \mathbf{x}\rangle\rvert^p \approx_{1+\varepsilon} \sum_{i\in T} \max_{j \in S_i} \lvert\langle
+                \mathbf{a_j},
                 \mathbf{x}\rangle\rvert^p$ for $\lvert T\rvert =
                 \widetilde{O}\left(\varepsilon^{-2}p^2n^{\max(1,p/2)}\right)$. Additionally, we show that there exists
                 an algorithm with runtime $\widetilde{O}\left(\mathsf{nnz}(\mathbf{A})+n^{\omega}\right)$ that returns
@@ -284,6 +286,45 @@
                 the
                 length of each episode and $T$ is the total number of interactions (ignoring polynomial dependence on
                 structural scale parameters).
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td />
+            <td>Ankita Prasad</td>
+            <td> <a onclick="showAbstract(this)" class="title"><b>Comparative Layer-Wise Analysis of Self-Supervised
+                  Speech Models</b></a> <br />
+              <div class="abs">
+                <b>Abstract.</b> Many self-supervised speech models, varying in their pre-training objective, input
+                modality, and pre-training data, have been proposed in the last few years. Despite impressive empirical
+                successes on downstream tasks, we still have a limited understanding of the properties encoded by the
+                models and differences across models. In this work, we examine the intermediate representations for a
+                variety of recent models. Specifically, we measure acoustic, phonetic, and word-level properties encoded
+                in individual layers, using a lightweight analysis tool based on canonical correlation analysis (CCA).
+                We find that these properties evolve across layers differently depending on the model, and the
+                variations relate to the choice of pre-training objective. We further investigate the utility of our
+                analyses for downstream tasks by comparing the property trends with performance on speech recognition
+                and spoken language understanding tasks. We discover that CCA trends provide reliable guidance to choose
+                layers of interest for downstream tasks and that single-layer performance often matches or improves upon
+                using all layers, suggesting implications for more efficient use of pre-trained models.
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td />
+            <td>Pushkar Shukla</td>
+            <td> <a onclick="showAbstract(this)" class="title"><b>CAVLi:- Generating Local Explanations for human
+                  Interpretable Concepts</b></a> <br />
+              <div class="abs">
+                <b>Abstract.</b> Interpretability techniques aim to provide the rationale behind a model's decision,
+                typically by explaining either an individual prediction (local explanation, e.g. 'why is this patient
+                diagnosed with this condition') or a class of predictions (global explanation, e.g. 'why is this set of
+                patients diagnosed with this condition in general'). While there are many methods focused on either one,
+                few frameworks can provide both local and global explanations consistently. In this work, we combine two
+                powerful existing techniques, one local (Local interpretable model-agnostic explanations (LIME) and one
+                global (Testing with Concept Activation Vectors), to provide local and global concept-based
+                explanations. We sanity-check our results on synthetic datasets as well as with human concepts on the
+                ImageNet dataset.
               </div>
             </td>
           </tr>
