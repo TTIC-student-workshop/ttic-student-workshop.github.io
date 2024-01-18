@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TTIC Student Workshop</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+  <style>
+    .bg-slate-100 {
+      background-color: #f1f5f9;
+    }
+
+    .text-ttic-primary {
+      color: #006eb6;
+    }
+
+    .border-ttic-primary {
+      border-color: #006eb6 !important;
+    }
+
+    .alert-ttic-primary {
+      color: hsl(204, 100%, 36%);
+      background-color: hsl(204, 100%, 90%);
+      border-color: hsl(204, 100%, 84%);
+    }
+
+    .title {
+      cursor: pointer;
+    }
+
+    .abs {
+      display: none;
+    }
+
+    .schedule {
+      /* table-layout: fixed; */
+      width: 100%;
+      min-width: 936px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="bg-slate-100 p-4 rounded-3 my-3">
+      <div class="d-sm-flex flex-row">
+        <div>
+          <a href="https://ttic.edu/" target="_blank">
+            <img src="https://ttic.edu/img/logo.png" style="max-height:240px;">
+          </a>
+        </div>
+        <div class="flex-grow-1 ps-sm-5 pt-3 pt-sm-0">
+          <h1 class="h3">TTIC Student Workshop</h1>
+          <h2 class="h5 text-muted">November 18, 2022</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="my-4">
+      <div class="alert alert-ttic-primary">
+        <strong>Congratulations to the award winners!</strong><br/>
+          <strong>Best Talk Award:</strong> Kumar Kshitij Patel, Freda Shi</br>
+        <strong>Best Poster Award:</strong> Anmol Kabra
+      </div>
+    </div>
+
+    <div>
+      <p>
+        The 6th <a href="https://ttic.edu" target="_blank" />TTIC</a> Student Workshop took place <strong>in
+          person</strong> on November 18, 2022. It included student talks, a poster session, and an invited
+        talk.
+      </p>
+      <ul>
+        <li>Talks will be 20 minutes long, with 5 minutes for questions and turnover. Lightning talks will be 3 minutes.</li>
+        <li>Talks will be in Room 530 (the 5th floor classroom), posters and refreshments will be in the 5th floor
+          common area,
+          and lunch will be in the 4th floor common area.</li>
+        <li>Awards will be given for best talk and best poster.</li>
+        <li>This year's keynote speaker is <a href="https://people.cs.uchicago.edu/~aakhan/">Aly Azeem Khan</a>.</li>
+      </ul>
+    </div>
+    <p>
+      <strong class="text-ttic-primary">Organizing Committee</strong>: Ben Lai, Max Ovsiankin, Karen Livescu, Madhur
+      Tulsiani, Erica Cocom <br />
+      <strong class="text-ttic-primary">Talk/Award Committee</strong>: Ali Vakilan, Lee Cohen, Hongyuan Mei
+    </p>
+    <!-- <div class="alert alert-ttic-primary">
+      <strong>All attendees:</strong> Please fill out the <a href="">registration
+        form</a> if you plan to attend.
+    </div> -->
+  </div>
+
+  <div class="container">
+    <h3>Schedule</h3>
+    <div class="mb-2">
+      Times in CST. <span class="text-muted">(Click on the talk titles to view abstracts.)</span>
+    </div>
+    <div class="table-responsive-lg">
+      <table class="schedule table table-sm table-hover">
+        <tbody>
+          <tr>
+            <td style="width:120px"><b>8:30-9:05</b></td>
+            <td style="width:300px"><b>Breakfast & Opening Remarks</b></td>
+            <td />
+          </tr>
+
+          <tr>
+            <td><b>9:05-10:45</b></td>
+            <td><b>Talk Session 1</b> (Chair: Ali Vakilian)</td>
+            <td />
+          </tr>
+
+          <tr>
+            <td> </td>
+            <td>Ben Lai</td>
+            <td>
+              <a onclick="showAbstract(this)" class="title"><b>Flexible Backbone Construction via Deep Generative Model
+                  for de novo Protein Design</b></a>
+              </br>
+              <div class="abs">
+                <b>Abstract.</b>
+                Current computational protein design paradigms heavily rely on robust backbone assembly for downstream
+                sequence design programs such as Rosetta and these methods often require idealized backbone structure
+                and
+                extensive manual calibration for successful design of the target fold. However, such design approaches
+                often involve expert curation of the template structures as well as conformation database therefore
+                time-consuming in practice. Recently, many deep-learning powered fixed backbone sequence design methods
+                have been proposed, these methods showed robustness towards degenerate backbone structures by
+                introducing
+                noise at the training stage of the deep learning module. Fast and accurate structure prediction methods
+                can enable rapid scanning of the designed sequences for structure compliance.</br>
+
+                Here, we present a VAE based backbone generative model that can construct designable backbone structures
+                from coarsely grained topological constraints for flexible and efficient backbone generation. To form an
+                end-to-end design pipeline, we will combine our backbone generative model with a deep learning based
+                fixed-backbone sequence design method ProteinMPNN and validate the design in silico with the AlphaFold2
+                structure predictor. We will demonstrate the capability of our design paradigm by parametric design of
+                (i)
+                helix bundles with customized topological properties and (ii) ligand binding proteins ab initio.
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td> </td>
+            <td>Ron Mosenzon</td>
+            <td> <a onclick="showAbstract(this)" class="title"><b>Exact Flow Sparsification Requires Unbounded
+                  Size</b></a>
+              <br />
+              <div class="abs">
+                <b>Abstract.</b> Given a large edge-capacitated network $G$ and a subset of $k$ vertices called
+                <em>terminals</em>,
+                an (<em>exact</em>) <em>flow sparsifier</em> is a small network $G'$
+                that preserves (exactly) all multicommodity flows that can be routed between the terminals.
+                Flow sparsifiers were introduced by Leighton and Moitra [STOC 2010],
+                and have been studied and used in many algorithmic contexts. </br>
+
+                A fundamental question that remained open for over a decade,
+                asks whether every $k$-terminal network admits an exact flow sparsifier
+                whose size is bounded by some function $f(k)$
+                (regardless of the size of $G$ or its capacities).
+                We resolve this question in the negative
+                by proving that there exist $6$-terminal networks $G$
+                whose flow sparsifiers $G'$ must have arbitrarily large size.
+                This unboundedness is perhaps surprising,
+                since the analogous sparsification that preserves all terminal cuts
+                (called <em>exact cut sparsifier</em> or <em>mimicking network</em>)
+                admits sparsifiers of size $f_0(k)\leq 2^{2^k}$
+                [Hagerup, Katajainen, Nishimura, and Ragde, JCSS 1998]. </br>
+
+                We prove our results by analyzing the set of all feasible demands in the network,
+                known as the <em>demand polytope</em>.
+                We identify an invariant of this polytope,
+                essentially the slope of certain facets,
+                that can be made arbitrarily large even for $k=6$,
+                and implies an explicit lower bound on the size of the network.
+                We further use this technique to answer, again in the negative,
+                an open question of Seymour [JCTB 2015] regarding flow-sparsification
+                that uses only contractions and preserves the infeasibility of one demand vector. </br>
+              </div>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Kumar Kshitij Patel</td>
+            <td><a onclick="showAbstract(this)" class="title"><b>Distributed Online and Bandit Convex
+                  Optimization</b></a>
+              <br />
+              <div class="abs">
+                <b>Abstract.</b> We study the problems of distributed online and bandit convex optimization against an
+                adaptive adversary. We aim to minimize the average regret on $M$ machines working in parallel for $T$
+                time
+                steps that are allowed to communicate $R$ times intermittently. Assuming the underlying cost functions
+                are
+                convex, our results show collaboration is not beneficial if the machines have access to the first-order
+                gradient information at the queried points. We show that in this setting, simple non-collaborative
+                algorithms are min-max optimal. This contrasts the stochastic setting, where each machine samples the
+                cost
+                functions from a fixed distribution. Next, we consider the harder setting of distributed optimization
+                with
+                bandit (zeroth-order) feedback, where the machines can only access values of the cost functions at the
+                queried points. The key finding here is to identify the high-dimensional regime where collaboration is
+                beneficial and may even lead to a linear speedup in the number of machines. Our results are the first
+                attempts towards bridging the gap between distributed online optimization against stochastic and
+                adaptive
+                adversaries.
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Naren Sarayu Manoj</td>
+            <td><a onclick="showAbstract(this)" class="title"><b>Group Lewis Weights and Group Norm
+                  Sparsification</b></a>
+              <br />
+              <div class="abs">
+                <b>Abstract.</b> Given $p \ge 2$, a matrix $\mathbf{A} \in \mathbb{R}^{m \times n}$, and a partitioning
+                of $[m]$ into $k$ size-$r$ groups $S_1, \dots, S_k$, we prove that there exists a subset $T$ of $[k]$
+                and a corresponding group reweighting such that $\sum_{i=1}^k \max_{j \in S_i} \lvert\langle
+                \mathbf{a_j},
+                \mathbf{x}\rangle\rvert^p \approx_{1+\varepsilon} \sum_{i\in T} \max_{j \in S_i} \lvert\langle
+                \mathbf{a_j},
+                \mathbf{x}\rangle\rvert^p$ for $\lvert T\rvert =
+                \widetilde{O}\left(\varepsilon^{-2}p^2n^{\max(1,p/2)}\right)$. Additionally, we show that there exists
+                an algorithm with runtime $\widetilde{O}\left(\mathsf{nnz}(\mathbf{A})+n^{\omega}\right)$ that returns
+                such a subset, where $\omega$ is the matrix multiplication runtime exponent. Our results partially
+                resolve an open question posed in the paper <em>Chaining, Group Leverage Score Overestimates, and
+                  Fast Spectral Hypergraph Sparsification</em> by Jambulapati, Liu, and Sidford. Our results also yield
+                an
+                alternate analysis of "one-shot" Lewis sampling for $p\ge 2$, a new result proven in the SODA 2023
+                paper <em>Online Lewis Weight Sampling</em> by Woodruff and Yasuda.
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><b>10:45-10:55</b></td>
+            <td><b>Lightning Talks</b> (Chairs: Talk/Award Committee)</td>
+            <td />
+          </tr>
+          <tr>
+            <td />
+            <td>Anmol Kabra</td>
+            <td> <a onclick="showAbstract(this)" class="title"><b>Exponential Family Model-Based Reinforcement Learning
+                  via Score Matching</b></a> <br />
+              <div class="abs">
+                <b>Abstract.</b> We propose an optimistic model-based algorithm, dubbed SMRL, for finite-horizon
+                episodic
+                reinforcement learning (RL) when the transition model is specified by exponential family distributions
+                with $d$ parameters and the reward is bounded and known. SMRL uses score matching, an unnormalized
+                density
+                estimation technique that enables efficient estimation of the model parameter by ridge regression. Under
+                standard regularity assumptions, SMRL achieves $\tilde{O}(d \sqrt{H^3 T})$ online regret, where $H$ is
+                the
+                length of each episode and $T$ is the total number of interactions (ignoring polynomial dependence on
+                structural scale parameters).
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td />
+            <td>Jiading Fang</td>
+            <td> <a onclick="showAbstract(this)" class="title"><b>NeRF Registration with 3D Feature Field</b></a> <br />
+              <div class="abs">
+                <b>Abstract.</b> Neural Radiance Field (NeRF) has demonstrated impressive representative power of 3D
+                scenes. It is likely that such implicit representations are going to be the standard way, instead of
+                pointcloud, of exchanging 3D information. Traditionally, pointcloud registration has been an important
+                problem when integrating pointclouds from different sources. However, there is no previous work dealing
+                with this problem in terms of NeRF.
+                We propose a novel method that handles NeRF registration problem where there are multiple overlapped
+                NeRFs constructed independently by different agent (e.g. individual vehicles within a large
+                data-collecting fleet) and only NeRFs are communicated without the original images that construct them.
+                The method extends the traditional feature matching techniques into 3D and leverages the recent progress
+                made by feature field distilled from 2D self-supervised-learned features.
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td />
+            <td>Pushkar Shukla</td>
+            <td> <a onclick="showAbstract(this)" class="title"><b>CAVLi:- Generating Local Explanations for human
+                  Interpretable Concepts</b></a> <br />
+              <div class="abs">
+                <b>Abstract.</b> Interpretability techniques aim to provide the rationale behind a model's decision,
+                typically by explaining either an individual prediction (local explanation, e.g. 'why is this patient
+                diagnosed with this condition') or a class of predictions (global explanation, e.g. 'why is this set of
+                patients diagnosed with this condition in general'). While there are many methods focused on either one,
+                few frameworks can provide both local and global explanations consistently. In this work, we combine two
+                powerful existing techniques, one local (Local interpretable model-agnostic explanations (LIME) and one
+                global (Testing with Concept Activation Vectors), to provide local and global concept-based
+                explanations. We sanity-check our results on synthetic datasets as well as with human concepts on the
+                ImageNet dataset.
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><b>11:00-12:00</b></td>
+            <td><b>Keynote Talk: Aly Azeem Khan</b> <br /> <a href="https://people.cs.uchicago.edu/~aakhan/"> Speaker
+                Bio</a></td>
+            <td> <b>Computational Immunology: New computational approaches to understand immune function</b>
+            </td>
+          </tr>
+          <tr>
+            <td><b>12:00-12:40</b></td>
+            <td><b>Lunch</b></td>
+            <td>4th floor kitchen / common area</td>
+          </tr>
+          <tr>
+            <td><b>12:40-13:15</b></td>
+            <td><b>Lunch + Poster Session</b> (includes posters for lightning talks)</td>
+            <td>5th floor common area</td>
+          </tr>
+          <tr>
+            <td />
+            <td>Ju-Chieh Chou</td>
+            <td> <a onclick="showAbstract(this)" class="title"><b>Joint language modeling for speech and text via
+                  speech-text splicing</b></a> <br />
+              <div class="abs">
+                <b>Abstract.</b> An open question in speech research is whether text data can be used to improve
+                pre-trained speech models. We introduce an approach to learning a joint speech-text language model (LM)
+                by
+                augmenting the training data with alternating speech and text. By learning from the concatenated
+                discretized speech and text, the model learns shared representations between speech and text. We show
+                that
+                the model is able to perform cross-modal continuation, and zero-shot transfer between speech and text
+                after fine-tuning on spoken language understanding tasks. We conduct experiments on different units for
+                speech and different subsets of speech and/or text training data to better understand the properties of
+                speech-text joint LM.
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><b>13:15-14:55</b></td>
+            <td><b>Talk Session 2</b> (Chair: Lee Cohen)</td>
+            <td />
+          </tr>
+          <tr>
+            <td> </td>
+            <td>Gene Li</td>
+            <td> <a onclick="showAbstract(this)" class="title"><b>Pessimism for Offline Linear Contextual Bandits using
+                  $L_p$ Confidence Sets</b></a> <br />
+              <div class="abs">
+                <b>Abstract.</b> We present a family $\{\hat{\pi}_p\}_{p \geq 1}$ of pessimistic learning rules for
+                offline learning of linear
+                contextual bandits, relying on confidence sets with respect to different $\ell_p$ norms, where
+                $\hat{\pi}_2$ corresponds
+                to Bellman-consistent pessimism (BCP), while $\hat{\pi}_\infty$ is a novel generalization of lower
+                confidence bound (LCB)
+                to the linear setting. We show that the novel $\hat{\pi}_\infty$ learning rule is, in a sense,
+                adaptively
+                optimal, as it
+                achieves the minimax performance (up to log factors) against all $\ell_q$-constrained problems, and as
+                such it
+                strictly dominates all other predictors in the family, including $\hat{\pi}_2$.
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td> </td>
+            <td>Han Shao</td>
+            <td> <a onclick="showAbstract(this)" class="title"><b>A Theory of PAC Learnability under Transformation
+                  Invariances</b></a> <br />
+              <div class="abs">
+                <b>Abstract.</b> Transformation invariances are present in many real-world problems. For example, image
+                classification is usually invariant to rotation and color transformation: a rotated car in a different
+                color is still identified as a car. Data augmentation, which adds the transformed data into the training
+                set and trains a model on the augmented data, is one commonly used technique to build these invariances
+                into the learning process. However, it is unclear how data augmentation performs theoretically and what
+                the optimal algorithm is in presence of transformation invariances. In this paper, we study PAC
+                learnability under transformation invariances in three settings according to different levels of
+                realizability: (i) A hypothesis fits the augmented data; (ii) A hypothesis fits only the original data
+                and
+                the transformed data lying in the support of the data distribution; (iii) Agnostic case. One interesting
+                observation is that distinguishing between the original data and the transformed data is necessary to
+                achieve optimal accuracy in setting (ii) and (iii), which implies that any algorithm not differentiating
+                between the original and transformed data (including data augmentation) is not optimal. Furthermore,
+                this
+                type of algorithms can even "harm" the accuracy. In setting (i), although it is unnecessary to
+                distinguish between the two data sets, data augmentation still does not perform optimally. Due to such a
+                difference, we propose two combinatorial mesures characterizing the optimal sample complexity in
+                setting
+                (i) and (ii)(iii) and provide the optimal algorithms.
+              </div>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td> </td>
+            <td>Keziah Naggita</td>
+            <td> <a onclick="showAbstract(this)" class="title"><b>The Strategic Perceptron</b></a> <br />
+              <div class="abs">
+                <b>Abstract.</b> The classical <em>Perceptron algorithm</em> provides a simple and elegant procedure for
+                learning a linear classifier. In each step, the algorithm observes the sample's <em>position</em> and
+                <em>label</em> and updates the current predictor accordingly if it makes a mistake. However, in presence
+                of
+                strategic agents that desire to be classified as positive and that are able to modify their position by
+                a
+                limited amount, the classifier may not be able to observe the true position of agents but rather a
+                position where the agent pretends to be. Unlike the original setting with perfect knowledge of
+                positions,
+                in this situation the Perceptron algorithm fails to achieve its guarantees, and we illustrate examples
+                with the predictor oscillating between two solutions forever, making an unbounded number of mistakes
+                even
+                though a perfect large-margin linear classifier exists. Our main contribution is providing a modified
+                Perceptron-style algorithm which makes a bounded number of mistakes in presence of strategic agents with
+                both $\ell_2$ and weighted $\ell_1$ manipulation costs. In our baseline model, knowledge of the
+                manipulation costs (i.e., the extent to which an agent may manipulate) is assumed. In our most general
+                model, we relax this assumption and provide an algorithm which learns and refines both the classifier
+                and
+                its cost estimates to achieve good mistake bounds even when manipulation costs are unknown.
+              </div>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td> </td>
+            <td>Omar Montasser</td>
+            <td> <a onclick="showAbstract(this)" class="title"><b>Boosting Barely Robust Learners</b></a> <br />
+              <div class="abs">
+                <b>Abstract.</b> We present an oracle-efficient algorithm for boosting the adversarial robustness of
+                barely robust learners. Barely robust learning algorithms learn predictors that are adversarially robust
+                only on a small fraction $\beta \ll 1$ of the data distribution. Our proposed notion of barely robust
+                learning
+                requires robustness with respect to a "larger" perturbation set; which we show is necessary for strongly
+                robust learning, and that weaker relaxations are not sufficient for strongly robust learning. Our
+                results
+                reveal a qualitative and quantitative equivalence between two seemingly unrelated problems: strongly
+                robust learning and barely robust learning.
+              </div>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><b>14:55-15:15</b></td>
+            <td><b>Coffee & Tea Break</b></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><b>15:15-16:55</b></td>
+            <td><b>Talk Session 3</b> (Chair: Hongyuan Mei)</td>
+            <td />
+          </tr>
+          <tr>
+            <td> </td>
+            <td>Freda Shi</td>
+            <td> <a onclick="showAbstract(this)" class="title"><b>Language Models are Multilingual Chain-of-Thought
+                  Reasoners</b></a> <br />
+              <div class="abs">
+                <b>Abstract.</b> We evaluate the reasoning abilities of large language models in multilingual settings.
+                We introduce the Multilingual Grade School Math (MGSM) benchmark, by manually translating 250
+                grade-school math problems from the GSM8K dataset (Cobbe et al., 2021) into ten typologically diverse
+                languages. We find that the ability to solve MGSM problems via chain-of-thought prompting emerges with
+                increasing model scale, and that models have strikingly strong multilingual reasoning abilities, even in
+                underrepresented languages such as Bengali and Swahili. Finally, we show that the multilingual reasoning
+                abilities of language models extend to other tasks such as commonsense reasoning and word-in-context
+                semantic judgment. The MGSM benchmark is publicly available at
+                <a href="https://github.com/google-research/url-nlp">https://github.com/google-research/url-nlp</a>.
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td> </td>
+            <td>Haochen Wang</td>
+            <td> <a onclick="showAbstract(this)" class="title"><b>Score Jacobian Chaining: Lifting Pretrained 2D
+                  Diffusion
+                  Models to 3D for Generation and Reconstruction</b></a> <br />
+              <div class="abs">
+                <b>Abstract.</b> Inference of a diffusion model can be interpreted as optimization on a vector field of
+                gradients, and we can apply chain rule on gradients. We back-propagate the score of a diffusion model
+                through the Jacobian of a differentiable renderer, which we instantiate to be a voxel radiance field.
+                This setup aggregates 2D scores at multiple camera viewpoints into a 3D score, and repurposes a
+                pre-trained 2D model for 3D data generation. We run the algorithm on several off-the-shelf diffusion
+                image generative models, including the recently released Stable Diffusion trained on the large-scale
+                LAION 5B dataset. We develop applications for 3D asset generation, editing as well as single-view 3D
+                reconstruction, and explore the validity of our assumptions.
+              </div>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td> </td>
+            <td>Chung-Ming Chien</td>
+            <td> <a onclick="showAbstract(this)" class="title"><b>Voice Conversion with Pre-Trained Self-Supervised
+                  Models</b></a> <br />
+              <div class="abs">
+                <b>Abstract.</b> The success of self-supervised learning has brought speech technology to a new era.
+                With
+                these powerful self-supervised pre-trained models, large amounts of labeled data are no longer necessary
+                in a variety of tasks. In this work, we present one of the first attempts to apply self-supervised
+                representations to a one-shot voice conversion task, where the model converts utterances spoken by any
+                speaker to the voice of a target speaker it has never seen before, given only one utterance from that
+                target speaker. We demonstrate that the phonetic and speaker information can be extracted and separated
+                from self-supervised representations without any labeled data. Though no phonetic annotation is used
+                during training, our analysis shows that the model implicitly learns to break down the utterances and
+                align short speech fragments from different speakers with similar phonetic content, which enables the
+                conversion of speaker identity without changing the content. Compared with previous work that does not
+                use
+                self-supervised pre-training, our method improves both naturalness and speaker similarity of the
+                converted
+                speech.
+              </div>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td> </td>
+            <td>Takuma Yoneda</td>
+            <td> <a onclick="showAbstract(this)" class="title"><b>Diffusion Models for Shared Autonomy</b></a> <br />
+              <div class="abs">
+                <b>Abstract.</b> Diffusion models have recently gained a lot of attention, especially in the context of
+                computer vision. In this work, we focus on the property of a diffusion model that it learns to "reverse
+                diffuse" a random sample back to a near in-distribution sample seen during training, and adapt it as an
+                assistive policy in shared autonomy. This property of diffusion models eliminates the necessity of
+                modeling user's behavior or learning when to intervene that previous methods had to deal with.
+              </div>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><b>16:55-17:15</b></td>
+            <td><b>Coffee & Tea Break</b></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><b>17:15-17:30</b></td>
+            <td><b>Awards & Final Remarks</b></td>
+            <td />
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <footer class="py-3 container">
+    <hr class="border border-1 opacity-75">
+    <strong class="me-2">Past Student Workshops:</strong>
+    <a href="/2021/" class="me-2">2021</a>
+    <a href="/2020/" class="me-2">2020</a>
+    <a href="https://home.ttic.edu/~shtoshni/sw_2019/" class="me-2">2019</a>
+    <a href="https://home.ttic.edu/~klivescu/TTIC-SW2017/" class="me-2">2017</a>
+    <a href="https://home.ttic.edu/~klivescu/TTIC-SW2016/" class="me-2">2016</a>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script type="text/javascript">
+    function showAbstract(e) {
+      f = e;
+      var div;
+
+      for (div = e.nextSibling; div.className != "abs"; div = div.nextSibling);
+
+      if (div.style.display === "none" || div.style.display === '') {
+        div.style.display = "inline-block";
+      } else {
+        div.style.display = "none";
+      }
+    }
+  </script>
+
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+                  "HTML-CSS": {
+                      availableFonts: ["Asana-Math"],
+                      preferredFont: "Asana-Math"
+                  }
+  });
+  </script>
+</body>
+
+</html>
