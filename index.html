@@ -130,17 +130,27 @@
             <td> </td>
             <td>Nirmit Joshi</td>
             <td>
-              <a onclick="showAbstract(this)" class="title"><b>Noisy Interpolation Learning with Shallow Univariate
-                  Neural Networks</b></a>
+              <a onclick="showAbstract(this)" class="title"><b>Noisy Interpolation Learning with Shallow Univariate ReLU
+                  Networks</b></a>
               </br>
               <div class="abs">
                 <b>Abstract.</b>
-                We study the asymptotic overfitting behavior of interpolation with minimum norm ($\ell_2$ of the
-                weights)
-                two-layer ReLU networks for noisy univariate regression. We show that overfitting is tempered for the
-                $L_1$
-                loss, and any
-                $L_p$ loss for $p<2$, but catastrophic for $p \ge 2$. </div>
+                Understanding how overparameterized neural networks generalize despite perfect interpolation of noisy
+                training data is a
+                fundamental question. Mallinar et. al. noted that neural networks seem to often exhibit "tempered
+                overfitting",
+                wherein the population risk does not converge to the Bayes optimal error, but neither does it approach
+                infinity,
+                yielding non-trivial generalization. However, this has not been studied rigorously.  We provide the
+                first rigorous
+                analysis of the overfitting behavior of regression with minimum norm ($\ell_2$ of weights), focusing on
+                univariate
+                two-layer ReLU networks.  We show overfitting is tempered (with high probability) when measured with
+                respect to the
+                $L_1$ loss, but also show that the situation is more complex than suggested by Mallinar et. al., and
+                overfitting is
+                catastrophic with respect to the $L_2$ loss, or when taking an expectation over the training set.
+              </div>
             </td>
           </tr>
           <tr>
