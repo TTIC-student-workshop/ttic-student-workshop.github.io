@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TTIC Student Workshop</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+  <style>
+    .bg-slate-100 {
+      background-color: #f1f5f9;
+    }
+
+    .text-ttic-primary {
+      color: #006eb6;
+    }
+
+    .border-ttic-primary {
+      border-color: #006eb6 !important;
+    }
+
+    .alert-ttic-primary {
+      color: hsl(204, 100%, 36%);
+      background-color: hsl(204, 100%, 90%);
+      border-color: hsl(204, 100%, 84%);
+    }
+
+    .title {
+      cursor: pointer;
+    }
+
+    .abs {
+      display: none;
+    }
+
+    .schedule {
+      /* table-layout: fixed; */
+      width: 100%;
+      min-width: 936px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="bg-slate-100 p-4 rounded-3 my-3">
+      <div class="d-sm-flex flex-row">
+        <div>
+          <a href="https://ttic.edu/" target="_blank">
+            <img src="https://ttic.edu/img/logo.png" style="max-height:240px;">
+          </a>
+        </div>
+        <div class="flex-grow-1 ps-sm-5 pt-3 pt-sm-0">
+          <h1 class="h3">TTIC Student Workshop</h1>
+          <h2 class="h5 text-muted">February 23, 2024</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="my-4">
+      <div class="alert alert-ttic-primary">
+        <strong>Congratulations to the award winners!</strong><br />
+        <strong>Best Talk Award:</strong> Jiahao Li, Kavya Ravichandran</br>
+        <strong>Best Poster Award:</strong> Kumar Kshitij Patel
+      </div>
+    </div>
+
+    <div>
+      <p>
+        The 7th <a href="https://ttic.edu" target="_blank" />TTIC</a> Student Workshop will take place <strong>in
+          person</strong> on February 23, 2024. It included student talks, a poster session, an invited talk, and a
+        panel discussion.
+      </p>
+      <ul>
+        <li>Talks will be 15 minutes long, with 5 minutes for questions and turnover.
+        </li>
+        <li>Talks will be in Room 530 (the 5th floor classroom), posters and refreshments will be in the 5th floor
+          common area,
+          and lunch will be in the 4th floor common area.</li>
+        <li>We will have best talk and best poster awards!</li>
+        <li>We honorably invite <a href="https://www.neyshabur.net">Behnam Neyshabur</a> coming back to TTIC as the
+          invited speaker. This will not be a technical talk. Instead, Behnam will be sharing <b>his valuable experience
+            in
+            academia and industry these years</b>.</li>
+      </ul>
+    </div>
+    <p>
+      <strong class="text-ttic-primary">Organizing Committee</strong>: Han Shao,
+      Chung-Ming Chien, Ron Mosenzon, Madhur Tulsiani, Erica Cocom <br />
+      <strong class="text-ttic-primary">Talk/Award Committee</strong>: Anand Bhattad, Liren Shan, Lingxiao Wang, Jiawei
+      Zhou,
+      Sam Buchanan
+    </p>
+    <!-- <div class="alert alert-ttic-primary">
+      <strong>All attendees:</strong> Please fill out the <a href="">registration
+        form</a> if you plan to attend.
+    </div> -->
+  </div>
+
+  <div class="container">
+    <h3>Schedule</h3>
+    <div class="mb-2">
+      Times in CST. <span class="text-muted">(Click on the talk titles to view abstracts.)</span>
+    </div>
+    <div class="table-responsive-lg">
+      <table class="schedule table table-sm table-hover">
+        <tbody>
+          <tr>
+            <td style="width:120px"><b>9:00-9:20</b></td>
+            <td style="width:300px"><b>Breakfast</b></td>
+            <td />
+          </tr>
+          <tr>
+            <td style="width:120px"><b>9:20-9:30</b></td>
+            <td style="width:300px"><b>Opening Remarks</b></td>
+            <td />
+          </tr>
+
+          <tr>
+            <td><b>9:30-10:30</b></td>
+            <td><b>Talk Session 1</b> (Chair: Lingxiao Wang)</td>
+            <td />
+          </tr>
+          <tr>
+            <td> </td>
+            <td>Nirmit Joshi</td>
+            <td>
+              <a onclick="showAbstract(this)" class="title"><b>Noisy Interpolation Learning with Shallow Univariate ReLU
+                  Networks</b></a>
+              </br>
+              <div class="abs">
+                <b>Abstract.</b>
+                Understanding how overparameterized neural networks generalize despite perfect interpolation of noisy
+                training data is a
+                fundamental question. Mallinar et. al. noted that neural networks seem to often exhibit "tempered
+                overfitting",
+                wherein the population risk does not converge to the Bayes optimal error, but neither does it approach
+                infinity,
+                yielding non-trivial generalization. However, this has not been studied rigorously.  We provide the
+                first rigorous
+                analysis of the overfitting behavior of regression with minimum norm ($\ell_2$ of weights), focusing on
+                univariate
+                two-layer ReLU networks.  We show overfitting is tempered (with high probability) when measured with
+                respect to the
+                $L_1$ loss, but also show that the situation is more complex than suggested by Mallinar et. al., and
+                overfitting is
+                catastrophic with respect to the $L_2$ loss, or when taking an expectation over the training set.
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td> </td>
+            <td>Kumar Kshitij Patel</td>
+            <td> <a onclick="showAbstract(this)" class="title"><b>New Perspectives on Local SGD for Federated
+                  Learning</b></a>
+              <br />
+              <div class="abs">
+                <b>Abstract.</b>
+                Federated Averaging or Local Stochastic Gradient Descent (Local SGD) is a predominant optimization
+                technique in
+                federated learning. It often outperforms simpler methods like mini-batch SGD for convex and non-convex
+                objectives.
+                However, there exists a gap between its practical success and theoretical understanding, as the
+                effectiveness of Local
+                SGD is challenging to prove. Our first result addresses this gap by presenting new lower bounds for
+                Federated Averaging,
+                which question existing heterogeneity assumptions that hope to explain its "unreasonable effectiveness."
+                We demonstrate
+                that accelerated mini-batch SGD can achieve optimal performance within specific heterogeneity frameworks
+                in general
+                convex settings. These findings underscore the importance of strong convexity in optimization and
+                highlight the need for
+                refined heterogeneity assumptions to characterize Local SGD's behavior accurately. We further show new
+                upper bounds in
+                the strongly convex setting and highlight a new perspective on local SGD's convergence by controlling
+                its fixed point.</br>
+
+                Complementing these bounds, our second result delves into a personalized variant of Local SGD. We
+                establish new
+                convergence guarantees for this personalized variant, improving the dependence on data heterogeneity
+                assumptions. Our
+                analysis reveals that personalized Local SGD surpasses pure local training and conventional federated
+                learning
+                algorithms that generate a consensus model for all devices. We highlight that personalization can do so
+                because it
+                mitigates the perils of local SGD by correcting its fixed point discrepancy. The insights from these
+                results
+                collectively advance our understanding of the dynamics of Local SGD in federated learning, offering a
+                comprehensive view
+                of its strengths and limitations and paving the way for future research and applications in this field.
+              </div>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Anmol Kabra</td>
+            <td><a onclick="showAbstract(this)" class="title"><b>Surrogate score design to incentivize behavior in
+                  rating systems</b></a>
+              <br />
+              <div class="abs">
+                <b>Abstract.</b> Rating agencies evaluate entities such as hospitals and universities on surrogates of
+                performance metrics.
+                Rated entities are thus incentivized to optimize surrogates, which leads to <em>unintended
+                  consequences</em> of
+                degrading on unrepresented performance metrics.
+                The agency's objective is thus to succinctly design surrogate scores, which when optimized also improve
+                all performance
+                metrics.
+                Taking inspiration from two hospital rating agencies, U.S. Government's Medicare agency and U.S. News &
+                World Report,
+                we present a model for designing surrogate scores that satisfy the agency's objective and
+                interpretability restrictions.
+                We cast this <em>minimal score design problem</em> into a problem of constructing polyhedral cones, and
+                determine
+                structural properties of performance metrics that dictate the succinctness of scores.
+                Moreover, we give algorithms to design surrogate scores, using tools in convex analysis and
+                computational geometry.
+                In doing so, we describe algorithms for decomposing polyhedral cones and finding minimal frames, which
+                is of independent
+                technical interest.
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>10:30-11:00</b></td>
+            <td><b>Invited Talk: Behnam Neyshabur</b></td>
+            <td><a onclick="showAbstract(this)" class="title"><b>Thriving in the Ever-Changing AI Job Market</b></a>
+              <br />
+              <div class="abs">
+                <b>Abstract.</b> The AI job market's constant evolution can be daunting for researchers striving to stay
+                ahead. In this talk, I'm hoping
+                to leverage on my personal struggles and experiences to share some practical strategies for adapting
+                your skills and
+                mindset to thrive in the dynamic world of AI. I'll also highlight some overlooked areas in academia for
+                researchers
+                seeking to make a meaningful impact.
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>11:00-11:45</b></td>
+            <td><b>Poster Session</b> (Chair: Sam Buchanan)</td>
+            <td>5th floor common area</td>
+          </tr>
+          <tr>
+            <td> </td>
+            <td>Kavya Ravichandran</td>
+            <td>
+              <a onclick="showAbstract(this)" class="title"><b>Nearly-tight Approximation Guarantees for the Improving
+                  Multi-Armed Bandits Problem</b></a>
+              </br>
+              <div class="abs">
+                <b>Abstract.</b>
+                We give nearly-tight upper and lower bounds for the <em>improving multi-armed bandits</em> problem. An
+                instance of this
+                problem has $k$ arms, each of whose reward functions is a concave and increasing function of the
+                <em>number of times
+                  that arm has been pulled so far</em>. We show that for any randomized online algorithm, there exists
+                an
+                instance on which it
+                must suffer at least an $\Omega(\sqrt{k})$ approximation factor relative to the optimal reward. We then
+                provide a
+                randomized online algorithm that guarantees an $O(\sqrt{k})$ approximation factor, if it is told the
+                maximum reward
+                achievable by the optimal arm in advance. We then show how to remove this assumption at the cost of an
+                extra $O(\log k)$
+                approximation factor, achieving an overall $O(\sqrt{k} \log k)$ approximation relative to optimal.
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td> </td>
+            <td>Kumar Kshitij Patel</td>
+            <td> <a onclick="showAbstract(this)" class="title"><b>New Perspectives on Local SGD for Federated
+                  Learning</b></a>
+              <br />
+              <div class="abs">
+                <b>Abstract.</b>
+                Federated Averaging or Local Stochastic Gradient Descent (Local SGD) is a predominant optimization
+                technique in
+                federated learning. It often outperforms simpler methods like mini-batch SGD for convex and non-convex
+                objectives.
+                However, there exists a gap between its practical success and theoretical understanding, as the
+                effectiveness of Local
+                SGD is challenging to prove. Our first result addresses this gap by presenting new lower bounds for
+                Federated Averaging,
+                which question existing heterogeneity assumptions that hope to explain its "unreasonable effectiveness."
+                We demonstrate
+                that accelerated mini-batch SGD can achieve optimal performance within specific heterogeneity frameworks
+                in general
+                convex settings. These findings underscore the importance of strong convexity in optimization and
+                highlight the need for
+                refined heterogeneity assumptions to characterize Local SGD's behavior accurately. We further show new
+                upper bounds in
+                the strongly convex setting and highlight a new perspective on local SGD's convergence by controlling
+                its fixed point.</br>
+
+                Complementing these bounds, our second result delves into a personalized variant of Local SGD. We
+                establish new
+                convergence guarantees for this personalized variant, improving the dependence on data heterogeneity
+                assumptions. Our
+                analysis reveals that personalized Local SGD surpasses pure local training and conventional federated
+                learning
+                algorithms that generate a consensus model for all devices. We highlight that personalization can do so
+                because it
+                mitigates the perils of local SGD by correcting its fixed point discrepancy. The insights from these
+                results
+                collectively advance our understanding of the dynamics of Local SGD in federated learning, offering a
+                comprehensive view
+                of its strengths and limitations and paving the way for future research and applications in this field.
+              </div>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Chung-Ming Chien</td>
+            <td><a onclick="showAbstract(this)" class="title"><b>Learning Fine-Grained Controllability on Speech
+                  Generation via Efficient Fine-Tuning</b></a>
+              <br />
+              <div class="abs">
+                <b>Abstract.</b> As the scale of generative models continues to grow, the efficient reuse and adaptation
+                of pre-trained models have
+                become crucial considerations. In this work, we propose Voicebox Adapter, a novel approach that
+                integrates fine-grained
+                conditions into a pre-trained text-conditioned speech generation model using a cross-attention module.
+                To ensure a
+                smooth integration of newly introduced modules with the pre-trained ones, we explore various efficient
+                fine-tuning
+                approaches. Our investigation reveals that the LoRA with bias-tuning configuration yields the best
+                performance,
+                enhancing controllability without compromising the quality of generated speech. Across three
+                fine-grained conditional
+                generation tasks, we empirically demonstrate the efficacy of Voicebox Adapter and its remarkable
+                resource efficiency.
+                Follow-up experiments further highlight the robustness of Voicebox Adapter across diverse training and
+                data setups.
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>11:45-12:30</b></td>
+            <td><b>Lunch</b></td>
+            <td>4th floor kitchen / common area</td>
+          </tr>
+
+          <tr>
+            <td><b>12:30-13:30</b></td>
+            <td><b>Research at TTIC Talk: Ohad Trabelsi</b></td>
+            <td><a onclick="showAbstract(this)" class="title"><b>(Almost) Ruling Out SETH Lower Bounds for All-Pairs
+                  Max-Flow</b></a>
+              <br />
+              <div class="abs">
+                <b>Abstract.</b> TBD
+
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>13:30-14:30</b></td>
+            <td><b>Talk Session 2</b> (Chair: Anand Bhattad)</td>
+            <td />
+          </tr>
+          <tr>
+            <td> </td>
+            <td>Pushkar Shukla</td>
+            <td> <a onclick="showAbstract(this)" class="title"><b>TIBET- Identifying and evaluating biases in
+                  Text-to-Image Generative Models</b></a> <br />
+              <div class="abs">
+                <b>Abstract.</b> Text-to-Image (TTI) generative models have shown great progress in the past few years
+                in terms of their ability to
+                generate complex and high-quality imagery. At the same time, these models have been shown to suffer from
+                harmful biases,
+                including exaggerated societal biases (e.g., gender, ethnicity), as well as incidental correlations that
+                limit such
+                model's ability to generate more diverse imagery. In this paper, we propose a general approach to study
+                and quantify a
+                broad spectrum of biases, for any TTI model and for any prompt, using counterfactual reasoning. Unlike
+                other works that
+                evaluate generated images on a predefined set of bias axes, our approach automatically identifies
+                potential biases that
+                might be relevant to the given prompt, and measures those biases. In addition, our paper extends
+                quantitative scores
+                with post-hoc explanations in terms of semantic concepts in the images generated. We show that our
+                method is uniquely
+                capable of explaining complex multi-dimensional biases through semantic concepts, as well as the
+                intersectionality
+                between different biases for any given prompt. We perform extensive user studies to illustrate that the
+                results of our
+                method and analysis are consistent with human judgements.
+              </div>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td> </td>
+            <td>Jiahao Li</td>
+            <td> <a onclick="showAbstract(this)" class="title"><b>Instant3D: Fast Text-to-3D with Sparse-View Generation
+                  and Large Reconstruction Model</b></a> <br />
+              <div class="abs">
+                <b>Abstract.</b> Text-to-3D with diffusion models has achieved remarkable progress in recent years.
+                However, existing methods either rely
+                on score distillation-based optimization which suffer from slow inference, low diversity and Janus
+                problems, or are
+                feed-forward methods that generate low-quality results due to the scarcity of 3D training data. In this
+                paper, we
+                propose Instant3D, a novel method that generates high-quality and diverse 3D assets from text prompts in
+                a feed-forward
+                manner. We adopt a two-stage paradigm, which first generates a sparse set of four structured and
+                consistent views from
+                text in one shot with a fine-tuned 2D text-to-image diffusion model, and then directly regresses the
+                NeRF from the
+                generated images with a novel transformer-based sparse-view reconstructor. Through extensive
+                experiments, we demonstrate
+                that our method can generate diverse 3D assets of high visual quality within 20 seconds, which is two
+                orders of
+                magnitude faster than previous optimization-based methods that can take 1 to 10 hours.
+              </div>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td> </td>
+            <td>Jiading Fang</td>
+            <td> <a onclick="showAbstract(this)" class="title"><b>Transcrib3D: 3D Referring Expression Resolution
+                  through Large Language Models</b></a> <br />
+              <div class="abs">
+                <b>Abstract.</b> 3D referring expression resolution involves identifying a unique target object within a
+                3D scene based on a natural
+                language description, which may include the target’s semantic class, relation with other objects, and
+                other attributes.
+                We introduce Transcrib3D, an approach that brings together 3D detection methods and the emergent
+                reasoning capabilities
+                of large language models (LLMs), using text as the unifying medium. Text is a natural connective format,
+                as the native
+                representation of LLMs and the output format of detectors. This synergy allows us to sidestep the need
+                for learning
+                complex multi-modality “adapters” from limited 3D annotated data. The use of general-purpose LLMs to
+                support the
+                reasoning process brings multiple benefits: (1) It allows flexible, multi-step compositional reasoning
+                with code
+                generation and execution; (2) It provides human-readable and interpretable reasoning process; (3) It
+                allows for
+                iterative development through prompt engineering. Transcrib3D demonstrates its effectiveness in
+                experiments, achieving
+                state-of-the-art results on 3D referring benchmarks, with a great leap in performance from previous
+                multi-modality
+                baselines. Remarkably, after the visual object detection, the reasoning module runs in a zero-shot
+                setting without any
+                training on the dataset, contrary to most of the competitive baselines. Additionally, we provide an
+                analysis of common
+                failure scenarios to inform potential enhancements in future work.
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>14:30-14:45</b></td>
+            <td><b>Coffee & Tea Break</b></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td><b>14:45-15:45</b></td>
+            <td><b>Talk Session 3</b> (Chair: Liren Shan)</td>
+            <td />
+          </tr>
+          <tr>
+            <td> </td>
+            <td>Melissa Dutz</td>
+            <td> <a onclick="showAbstract(this)" class="title"><b>Winning Without Observing Payoffs: Exploiting
+                  Behavioral Bias to Win Nearly Every Round</b></a> <br />
+              <div class="abs">
+                <b>Abstract.</b> Gameplay under various forms of uncertainty has been widely studied. Feldman et al.
+                (2010) studied a particularly
+                low-information setting in which one observes the opponent's actions but no payoffs, not even one's own,
+                and introduced
+                an algorithm which guarantees one's payoff nonetheless approaches the minimax optimal value (i.e., zero)
+                in a symmetric
+                zero-sum game. Against an opponent playing a minimax-optimal strategy, approaching the value of the game
+                is the best one
+                can hope to guarantee. However, a wealth of research in behavioral economics shows that people often do
+                not make
+                perfectly rational, optimal decisions. Here we consider whether it is possible to actually win in this
+                setting if the
+                opponent is behaviorally biased. We model several deterministic, biased opponents and show that even
+                without knowing the
+                game matrix in advance or observing any payoffs, it is possible to take advantage of each bias in order
+                to win nearly
+                every round (so long as the game has the property that each action beats and is beaten by at least one
+                other action). We
+                also provide a partial characterization of the kinds of biased strategies that can be exploited to win
+                nearly every
+                round, and provide algorithms for beating some kinds of biased strategies even when we don't know which
+                strategy the
+                opponent uses.
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td> </td>
+            <td>Max Ovsiankin</td>
+            <td> <a onclick="showAbstract(this)" class="title"><b>Improved Approximations for $\ell_p$-Shortest Path and
+                  lp-Network Design</b></a> <br />
+              <div class="abs">
+                <b>Abstract.</b> We present quasipolynomial-time approximation algorithms for the $\ell_p$-shortest Path
+                problem and for a class of lp network design problems. The $\ell_p$-version of a network design problem
+                is one
+                in which the edges of the instance network have vector-value weights, and one is tasked with finding a
+                subset of the edges minimizing the $\ell_p$-norm of the sum of its weight vectors subject to some
+                constraints.
+              </div>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td> </td>
+            <td>Kavya Ravichandran</td>
+            <td>
+              <a onclick="showAbstract(this)" class="title"><b>Nearly-tight Approximation Guarantees for the Improving
+                  Multi-Armed Bandits Problem</b></a>
+              </br>
+              <div class="abs">
+                <b>Abstract.</b>
+                We give nearly-tight upper and lower bounds for the <em>improving multi-armed bandits</em> problem. An
+                instance of this
+                problem has $k$ arms, each of whose reward functions is a concave and increasing function of the
+                <em>number of times
+                  that arm has been pulled so far</em>. We show that for any randomized online algorithm, there exists
+                an
+                instance on which it
+                must suffer at least an $\Omega(\sqrt{k})$ approximation factor relative to the optimal reward. We then
+                provide a
+                randomized online algorithm that guarantees an $O(\sqrt{k})$ approximation factor, if it is told the
+                maximum reward
+                achievable by the optimal arm in advance. We then show how to remove this assumption at the cost of an
+                extra $O(\log k)$
+                approximation factor, achieving an overall $O(\sqrt{k} \log k)$ approximation relative to optimal.
+              </div>
+            </td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td><b>15:45-16:00</b></td>
+            <td><b>Coffee & Tea Break</b></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><b>16:00-16:40</b></td>
+            <td><b>Talk Session 4</b> (Chair: Jiawei Zhou)</td>
+            <td />
+          </tr>
+          <tr>
+            <td> </td>
+            <td>David Yunis</td>
+            <td> <a onclick="showAbstract(this)" class="title"><b>Subwords as Skills: Tokenization for Sparse-Reward
+                  Reinforcement Learning</b></a> <br />
+              <div class="abs">
+                <b>Abstract.</b> Exploration in sparse-reward reinforcement learning is difficult due to the need for
+                long, coordinated sequences of
+                actions in order to achieve any reward. Moreover, in continuous action spaces there are an infinite
+                number of possible
+                actions, which only increases the difficulty of exploration. One class of methods designed to address
+                these issues forms
+                temporally extended actions, often called skills, from interaction data collected in the same domain,
+                and optimizes a
+                policy on top of this new action space. Typically such methods require a lengthy pretraining phase,
+                especially in
+                continuous action spaces, in order to form the skills before reinforcement learning can begin. Given
+                prior evidence that
+                the full range of the continuous action space is not required in such tasks, we propose a novel approach
+                to
+                skill-generation with two components. First we discretize the action space through clustering, and
+                second we leverage a
+                tokenization technique borrowed from natural language processing to generate temporally extended
+                actions. Such a method
+                outperforms baselines for skill-generation in several challenging sparse-reward domains, and requires
+                orders-of-magnitude less computation in skill-generation and online rollouts.
+              </div>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td> </td>
+            <td>Ju-Chieh Chou</td>
+            <td> <a onclick="showAbstract(this)" class="title"><b>Toward Joint Language Modeling for Speech Units and
+                  Text</b></a> <br />
+              <div class="abs">
+                <b>Abstract.</b> Speech and text are two major forms of human language. The research community has been
+                focusing on mapping speech to
+                text or vice versa for many years. However, in the field of language modeling, very little effort has
+                been made to model
+                them jointly. In light of this, we explore joint language modeling for speech units and text.
+                Specifically, we compare
+                different speech tokenizers to transform continuous speech signals into discrete units and use different
+                methods to
+                construct mixed speech-text data. We introduce automatic metrics to evaluate how well the joint LM mixes
+                speech and
+                text. We also fine-tune the LM on downstream spoken language understanding (SLU) tasks with different
+                modalities (speech
+                or text) and test its performance to assess the model's learning of shared representations. Our results
+                show that by
+                mixing speech units and text with our proposed mixing techniques, the joint LM improves over a
+                speech-only baseline on
+                SLU tasks and shows zero-shot cross-modal transferability.
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>16:40-17:20</b></td>
+            <td><b>Panel Discussion</b> (Coordinator: Emily Ruth Diana)</td>
+            <td><b>From Research to Job Search: Suggestions for Future Ph.D. Graduates</b><br />
+              Panelists: Avrim Blum, Behnam Neyshabur, Madhur Tulsiani, Rad Niazadeh, Aly Azeem Khan
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><b>17:20-17:30</b></td>
+            <td><b>Awards & Final Remarks</b></td>
+            <td />
+          </tr>
+          <tr>
+            <td><b>17:30-18:30</b></td>
+            <td><b>TGIF</b></td>
+            <td><b>Come and enjoy the food, beer, and have fun!
+            </td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <footer class="py-3 container">
+    <hr class="border border-1 opacity-75">
+    <strong class="me-2">Past Student Workshops:</strong>
+    <a href="/2022/" class="me-2">2022</a>
+    <a href="/2021/" class="me-2">2021</a>
+    <a href="/2020/" class="me-2">2020</a>
+    <a href="https://home.ttic.edu/~shtoshni/sw_2019/" class="me-2">2019</a>
+    <a href="https://home.ttic.edu/~klivescu/TTIC-SW2017/" class="me-2">2017</a>
+    <a href="https://home.ttic.edu/~klivescu/TTIC-SW2016/" class="me-2">2016</a>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script type="text/javascript">
+    function showAbstract(e) {
+      f = e;
+      var div;
+
+      for (div = e.nextSibling; div.className != "abs"; div = div.nextSibling);
+
+      if (div.style.display === "none" || div.style.display === '') {
+        div.style.display = "inline-block";
+      } else {
+        div.style.display = "none";
+      }
+    }
+  </script>
+
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+                  "HTML-CSS": {
+                      availableFonts: ["Asana-Math"],
+                      preferredFont: "Asana-Math"
+                  }
+  });
+  </script>
+</body>
+
+</html>
